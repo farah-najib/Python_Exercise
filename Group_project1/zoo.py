@@ -1,5 +1,5 @@
 import random
-class Animal():
+class Animal :
     def __init__(self, name, age,energy_level):
         self.name = name
         self.age = age
@@ -97,6 +97,8 @@ class Elephant(Herbivore):
 
     def eat(self):
         super().eat(f"{self.name} Elephant")
+
+
 class Visitor():
     def __init__(self, name, age):
         self.name = name
@@ -175,18 +177,10 @@ class Zoo:
            self.herbivore_lunchtime()
         if current_time == 13:
            self.carnivore_lunchtime()
-
-    # play time between 14 and 17
-
-
-
         elif 14 <= current_time < 17:
             self.playtime()
-
-        # hunting time between 17 and 20
         elif 17 <= current_time < 20:
              self.hunting_time()
-
         if current_time == 22:
            for animal in self.animals:
              animal.sleep()
@@ -206,7 +200,7 @@ class Zoo:
                print('See you next time!')
                break
             elif user_input == 'f':
-                self.visitor_feeds_animal(self)
+                self.visitor_feeds_animal()
                 pass
             elif user_input == 'o':
             # TODO Optional: Enter observer mode where the user observes the zoo for 6 hours.
